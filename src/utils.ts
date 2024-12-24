@@ -11,6 +11,8 @@ export function isIdbSupported(): boolean {
  * check if [OPFS SyncAccessHandle](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle) supported
  */
 export async function isOpfsSupported(): Promise<boolean> {
+  console.log('Running forked version of isOpfsSupported')
+
   // must call and test, see https://stackoverflow.com/questions/76113945/file-system-access-api-on-safari-ios-createsyncaccesshandle-unknownerror-i
   const inner = async (): Promise<boolean> => {
     const root = await navigator?.storage.getDirectory?.()
