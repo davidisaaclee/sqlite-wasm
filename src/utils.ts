@@ -50,7 +50,7 @@ export async function isOpfsSupported(): Promise<boolean> {
 
     const url = URL.createObjectURL(
       new Blob(
-        [`(${inner})().then(postMessage)`],
+        [`(${inner})('this is the forked version').then(postMessage)`],
         { type: 'text/javascript' },
       ),
     )
